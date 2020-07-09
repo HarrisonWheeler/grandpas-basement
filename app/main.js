@@ -1,7 +1,7 @@
 import BasementController from "./Controllers/BasementController.js";
 
 class App {
-  valuesController = new BasementController();
+  basementController = new BasementController();
 }
 
 window["app"] = new App();
