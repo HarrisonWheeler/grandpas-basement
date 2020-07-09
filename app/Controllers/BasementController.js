@@ -17,7 +17,9 @@ export default class BasementController {
   }
 
   addMoney() {
-
+    _basementService.addMoney()
+    // @ts-ignore
+    document.getElementById("balance").innerHTML = _store.money
   }
 
   addItem() {

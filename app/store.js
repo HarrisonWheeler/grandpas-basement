@@ -1,5 +1,7 @@
 import Basement from "./Models/Basement.js"
 
+
+
 let _state = {
   // activeValue: new Value({ title: "Value" }),
   /** @type {Basement[]} */
@@ -13,6 +15,14 @@ class Store {
   /**
    * Provides access to application state data
    */
+  constructor() {
+    this.money = 0
+
+  }
+  addMoney() {
+    this.money += 10
+    console.log(this.money)
+  }
   addItem(newItem) {
     _state.items.push(newItem)
   }
