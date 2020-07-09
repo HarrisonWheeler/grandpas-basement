@@ -1,7 +1,7 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import BasementController from "./Controllers/BasementController.js";
 
 class App {
-  valuesController = new ValuesController();
+  valuesController = new BasementController();
 }
 
 window["app"] = new App();
