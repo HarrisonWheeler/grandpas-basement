@@ -13,15 +13,16 @@ export default class Basement {
 
     get Template() {
         let template = /*html*/ `
-
+        <div class="col-3">
         <div class="card bg-color m-3" style="width: 18rem;">
-        <img src="${this.img}" class="card-img-top" alt="popsicle">
+        <img src="${this.img}" class="card-img-top size img-fluid" alt="popsicle">
         <div class="card-body text-center bg-white">
         <h5 class="card-title">${this.item}</h5>
         <p class="card-text">${this.description}</p>
         <p>Qty: ${this.quantity}</p>
         <p>Price: ${this.price}</p>
         <button class="btn btn-primary btn-block" onclick="app.basementController.addItem('${this.id}')">BUY</button>
+        </div>
         </div>
         </div>
         `

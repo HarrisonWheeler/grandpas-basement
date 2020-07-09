@@ -6,7 +6,10 @@ let _state = {
   // activeValue: new Value({ title: "Value" }),
   /** @type {Basement[]} */
   basement: [
-    new Basement("", "Popsicle", "Grandpa Herberts famous summer treat!", 3, 2.00, "assets/popsicle.png")
+    new Basement("", "Popsicle", "Grandpa Herberts famous summer treat!", 3, 2.00, "assets/popsicle.png"),
+    new Basement("", "Grandpas Newspapers", "Grandpa Herberts famous summer treat!", 3, 10.00, "assets/newspaper.png"),
+    new Basement("", "Grandpas Walker", "Grandpa Herberts famous summer treat!", 1, 100.00, "assets/walker.png"),
+    new Basement("", "Save Chris", "Grandpa Herberts famous summer treat!", 1, 10000.00, "assets/chris.png")
   ],
   money: 0
 };
