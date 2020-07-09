@@ -6,8 +6,9 @@ let _state = {
   // activeValue: new Value({ title: "Value" }),
   /** @type {Basement[]} */
   basement: [
-    new Basement("Popsicle", "Grandpa Herberts famous summer treat!", 3, 2.00, "assets/popsicle.png")
-  ]
+    new Basement("", "Popsicle", "Grandpa Herberts famous summer treat!", 3, 2.00, "assets/popsicle.png")
+  ],
+  money: 0
 };
 console.log("hello from the basement store");
 
@@ -16,15 +17,16 @@ class Store {
    * Provides access to application state data
    */
   constructor() {
-    this.money = 0
+
 
   }
   addMoney() {
-    this.money += 10
-    console.log(this.money)
+    _state.money
+    console.log(_state.money)
   }
   addItem(newItem) {
-    _state.items.push(newItem)
+    _state.items
+    _state.money
   }
 
   get State() {

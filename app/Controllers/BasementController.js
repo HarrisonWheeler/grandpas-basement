@@ -8,6 +8,8 @@ function _draw() {
   let items = _store.State.basement
   items.forEach(item => template += item.Template)
   document.getElementById("itemCard").innerHTML = template
+  // @ts-ignore
+  document.getElementById("balance").innerHTML = _store.State.money
 }
 export default class BasementController {
   constructor() {
@@ -19,13 +21,13 @@ export default class BasementController {
   addMoney() {
     _basementService.addMoney()
     // @ts-ignore
-    document.getElementById("balance").innerHTML = _store.money
+    _draw()
   }
 
-  addItem() {
+  addItem(itemId) {
     // debugger
     console.log("button worked");
-    _basementService.addItem()
+    _basementService.addItem(itemId)
     _draw()
   }
 }

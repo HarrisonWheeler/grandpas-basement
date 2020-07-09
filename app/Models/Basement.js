@@ -1,5 +1,8 @@
+let id = 0
+
 export default class Basement {
-    constructor(item, description, quantity, price, img) {
+    constructor(id, item, description, quantity, price, img) {
+        this.id = id++
         this.item = item
         this.description = description
         this.quantity = quantity
@@ -18,7 +21,7 @@ export default class Basement {
         <p class="card-text">${this.description}</p>
         <p>Qty: ${this.quantity}</p>
         <p>Price: ${this.price}</p>
-        <button class="btn btn-primary btn-block" onclick="app.basementController.addItem()">BUY</button>
+        <button class="btn btn-primary btn-block" onclick="app.basementController.addItem('${this.id}')">BUY</button>
         </div>
         </div>
         `

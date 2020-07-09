@@ -6,13 +6,20 @@ console.log("hello from the service controller");
 class BasementService {
 
   addMoney() {
+    _store.State.money += 10
     _store.addMoney()
+
   }
-  addItem() {
+  addItem(itemId) {
     let newItem = new Basement()
     _store.addItem(newItem)
+    let index = _store.State.basement.find(item => item.id == itemId)
+    index.quantity--
+    _store.State.money -= index.price
   }
+
 }
+
 
 const SERVICE = new BasementService();
 export default SERVICE;
