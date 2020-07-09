@@ -1,4 +1,5 @@
 /* Styles */
-body{
-  background-color: olivedrab;
+.bg-image{
+  background-image: url(basement.jpg);
+  background-size: cover;
 }
