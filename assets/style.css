@@ -2,4 +2,5 @@
 .bg-image{
   background-image: url(basement.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
