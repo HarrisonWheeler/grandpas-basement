@@ -1,9 +1,29 @@
 export default class Basement {
-    constructor(data) {
-        this.title = data.title
+    constructor(item, description, quantity, price, img) {
+        this.item = item
+        this.description = description
+        this.quantity = quantity
+        this.price = price
+        this.img = img
     }
 
+
     get Template() {
-        return this.title
+        let template = /*html*/ `
+
+        <div class="card bg-color m-3" style="width: 18rem;">
+        <img src="${this.img}" class="card-img-top" alt="popsicle">
+        <div class="card-body text-center bg-white">
+        <h5 class="card-title">${this.item}</h5>
+        <p class="card-text">${this.description}</p>
+        <p>Qty: ${this.quantity}</p>
+        <p>Price: ${this.price}</p>
+        <button class="btn btn-primary btn-block" onclick="app.basementController.addItem()">BUY</button>
+        </div>
+        </div>
+        `
+
+        return template
+
     }
 }
