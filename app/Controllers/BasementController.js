@@ -11,6 +11,8 @@ function _draw() {
   document.getElementById("itemCard").innerHTML = template
   // @ts-ignore
   document.getElementById("balance").innerHTML = _store.State.money
+  document.getElementById("cartTotal").innerHTML = _store.State.cart
+
 }
 export default class BasementController {
   constructor() {

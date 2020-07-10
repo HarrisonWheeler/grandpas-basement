@@ -12,7 +12,7 @@ let _state = {
     new Basement("", "Save Chris", "Grandpa Herberts famous summer treat!", 1, 10000.00, "assets/chris.png")
   ],
   money: 0,
-
+  cart: 0
 };
 console.log("hello from the basement store");
 
@@ -34,7 +34,7 @@ class Store {
   }
   addCart(newItem) {
     _state.items
-
+    _state.cart
   }
 
   get State() {

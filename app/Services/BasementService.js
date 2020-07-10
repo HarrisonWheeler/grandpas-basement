@@ -6,7 +6,7 @@ console.log("hello from the service controller");
 class BasementService {
   addItem() {
     let newItem = new Basement()
-    _store.addCart(newItem)
+    _store.addItem(newItem)
     let index = _store.State.basement.find(item => item.id)
     index.quantity--
     _store.State.money -= index.price
@@ -22,6 +22,8 @@ class BasementService {
   addCart(itemId) {
     let index = _store.State.basement.find(item => item.id == itemId)
     document.getElementById("shoppingCart").innerHTML += index.Template
+    _store.State.cart++
+    _store.addCart(itemId)
   }
 
 }
