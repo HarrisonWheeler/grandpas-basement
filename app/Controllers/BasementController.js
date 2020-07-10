@@ -1,6 +1,7 @@
 import _basementService from "../Services/BasementService.js";
 import _store from "../store.js"
 
+
 //Public
 
 function _draw() {
@@ -24,10 +25,15 @@ export default class BasementController {
     _draw()
   }
 
-  addItem(itemId) {
+  addCart(itemId) {
     // debugger
     console.log("button worked");
-    _basementService.addItem(itemId)
+    _basementService.addCart(itemId)
+    _draw()
+  }
+
+  addItem(itemId) {
+    _basementService.addItem()
     _draw()
   }
 }

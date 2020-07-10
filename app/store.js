@@ -11,7 +11,8 @@ let _state = {
     new Basement("", "Grandpas Walker", "Grandpa Herberts famous summer treat!", 1, 100.00, "assets/walker.png"),
     new Basement("", "Save Chris", "Grandpa Herberts famous summer treat!", 1, 10000.00, "assets/chris.png")
   ],
-  money: 0
+  money: 0,
+
 };
 console.log("hello from the basement store");
 
@@ -23,13 +24,17 @@ class Store {
 
 
   }
+  addItem(newItems) {
+    _state.items
+    _state.money
+  }
   addMoney() {
     _state.money
     console.log(_state.money)
   }
-  addItem(newItem) {
+  addCart(newItem) {
     _state.items
-    _state.money
+
   }
 
   get State() {
